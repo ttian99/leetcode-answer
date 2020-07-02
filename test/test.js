@@ -85,10 +85,29 @@ var lengthOfLongestSubstring = function (s) {
     return maxStr.length;
 
 };
+
+var lengthOfLongestSubstring = function (s) {
+    var hash = {};
+    var len = s.length;
+    var max = 0;
+    var rk = -1;
+    for (let i = 0; i < len; i++) {
+        if (i != 0) {
+            delete hash[s.charAt(i - 1)];
+        }
+
+        while (rk + 1 < len && !hash.hasOwnProperty(s.charAt(rk + 1))) {
+            hash[s.charAt(rk + 1)] = true;
+            ++rk;
+        }
+        max = Math.max(max, rk - i + 1);
+    }
+    return max;
+}
 var arr = [
     // "",
     // "brnk",
-    // "abcabcbb",
+    "abcabcbb",
     // "bbbbb",
     // "pwwkew",
     // "nfpdmpi"
