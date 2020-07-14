@@ -16,11 +16,14 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+/**
+ *  1.迭代
+ *  input: 1-2-3-4-5-NULL
+ *  output: 5-4-3-2-1-NULL
+ *  时间复杂度: O(n)
+ *  空间复杂度: O(1)
+ */
 var reverseList = function(head) {
-    // 1.迭代
-    // 链表一般体现在代码实现
-    // input: 1-2-3-4-5-NULL
-    // output: 5-4-3-2-1-NULL
     var cur = head, prev = null, tmp = cur ? cur.next : null;
     while (cur != null) {
         tmp = cur.next;
@@ -30,23 +33,19 @@ var reverseList = function(head) {
     }
     return prev;
 };
+
 /**
- * @param {ListNode} head
- * @return {ListNode}
+ * 2.递归
+ * 
  */
 var reverseList = function(head) {
-    // 1.迭代
-    // 链表一般体现在代码实现
-    // input: 1-2-3-4-5-NULL
-    // output: 5-4-3-2-1-NULL
-    var cur = head, prev = null, tmp = cur ? cur.next : null;
-    while (cur != null) {
-        tmp = cur.next;
-        cur.next = prev;
-        prev = cur;
-        cur = tmp;
+    if (head == null || head.next == null) {
+        return head;
     }
-    return prev;
+    var cur = reverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return cur;
 };
 // @lc code=end
 
