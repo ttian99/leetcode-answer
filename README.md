@@ -21,6 +21,8 @@ https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
 ### 树(Tree)、二叉树(Binary Tree)、二叉搜索树(Binary SearchTree)和图(Graph)
 - 98.验证二叉搜索树 
 - 235.二叉树的最近公共祖先
-- 236.二叉树的最近公共祖先
-
-### 递归和分治
+- 236.二叉搜索树的最近公共祖先
+### 二叉树遍历
+### 递归(Recursion)和分治(Divide&Conquer)
+- 50.pow(n, x)
+- 
