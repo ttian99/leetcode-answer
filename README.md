@@ -15,3 +15,12 @@ https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
 ### 优先队列
 - 1.返回数据流中的第k大元素(703): https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/
 - 2.返回滑动窗口中的最大值(239): https://leetcode-cn.com/problems/sliding-window-maximum/
+### 映射(Map)和散列(hash)
+- 1.两数之和(1): https://leetcode-cn.com/problems/two-sum/
+- 2.三数之和(15): https://leetcode-cn.com/problems/3sum/
+### 树(Tree)、二叉树(Binary Tree)、二叉搜索树(Binary SearchTree)和图(Graph)
+- 98.验证二叉搜索树 
+- 235.二叉树的最近公共祖先
+- 236.二叉树的最近公共祖先
+
+### 递归和分治
