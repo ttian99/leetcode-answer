@@ -35,7 +35,9 @@ var reverseList = function(head) {
 };
 
 /**
- * 2.递归
+ * 2.自递归
+ * 时间复杂度：O(n)
+ * 空间复杂度: O(n)
  * 
  */
 var reverseList = function(head) {
@@ -47,5 +49,21 @@ var reverseList = function(head) {
     head.next = null;
     return cur;
 };
+
+
+/**
+ * 3.尾递归法
+ * 
+ */
+var reverseList = function(head) {
+    return reverse(null, head);
+};
+
+function reverse(prev, cur) {
+    if (!cur) return prev;
+    let tmp = cur.next;
+    cur.next = prev;
+    return reverse(cur, tmp);
+}
 // @lc code=end
 

@@ -24,5 +24,5 @@ https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
 - 236.二叉搜索树的最近公共祖先
 ### 二叉树遍历
 ### 递归(Recursion)和分治(Divide&Conquer)
-- 50.pow(n, x)
-- 
+- 50.pow(n, x): 
+- 169.求众数Majority: 
