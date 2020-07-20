@@ -9,6 +9,7 @@
 - 25.每k个节点一组翻转链表:
 https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
 ### 堆栈、队列
+- 20.有效的括号:https://leetcode-cn.com/problems/valid-parentheses/description/
 - 678.判断括号字符串是否有效 :https://leetcode-cn.com/problems/valid-parenthesis-string/
 - 232.用栈实现队列:https://leetcode-cn.com/problems/implement-queue-using-stacks/
 - 225.用队列实现堆栈:https://leetcode-cn.com/problems/implement-stack-using-queues/
@@ -36,3 +37,7 @@ https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
 - 102.二叉树层次遍历(Binary Tree Level Order): 
 - xxx.二叉树的最大和最小深度
 - xxx.生成有效括号组合
+
+### 剪枝
+- N皇后问题
+- 数独问题
