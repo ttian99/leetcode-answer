@@ -58,10 +58,13 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+// 0.暴力法：2次遍历
+// 第一次遍历记录长度n，第二次遍历到n/2返回该节点
+// t-O(n+n/2) m-O(1)
 
-// 1.暴力法：数组记录
+// 1.数组记录
 // 数组的中间长度就是中间节点
-// t-O(n) m-O(n)s
+// t-O(n) m-O(n)
 var middleNode = function(head) {
     if (!head) return null;
     if (!head.next) return head;
