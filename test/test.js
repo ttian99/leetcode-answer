@@ -1,33 +1,48 @@
-function repeatCount(nums, start, end, target) {
-    let count = 0;
-    for (let i = start; i <= end; i++) {
-        if (target == nums[i]) {
-            count++;
-        }
-    }
-    return count;
-}
-function getElement(nums, start, end) {
-    // 递归结束
-    if (start == end) {
-        return nums[start];
-    }
-
-    // 分为2
-    const mid = start + Math.floor((end - start) / 2);
-    const left = getElement(nums, start, mid);
-    const right = getElement(nums, mid + 1, end);
-
-    if (left == right) {
-        return left;
-    } else {
-        const leftCount = repeatCount(nums, start, end, left);
-        const rightCount = repeatCount(nums, start, end, right);
-        return leftCount > rightCount ? left : right;
-    }
-}
-var majorityElement = function (nums) {
-    return getElement(nums, 0, nums.length - 1);
+var LRUCache = function(capacity) {
+    this.capacity = capacity;
+    this.list = {};
+    this.arr = [];
 };
 
-majorityElement([3,2,3])
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+LRUCache.prototype.get = function(key) {
+    return this.list[key] || -1;
+};
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+LRUCache.prototype.put = function(key, value) {
+    var isFull = this.arr.length >= this.capacity;
+    if (isFull) { // 满了
+        var deleteKey = this.arr.pop();
+        delete this.list[deleteKey];
+    }
+    if (this.list[key]) { //存在
+        idx = this.arr.findIndex(v => key == v);
+        this.arr.splice(idx, 1);   
+    }
+    this.list[key] = value;
+    this.arr.unshift(key);
+};
+
+(() => {
+    var cache = new LRUCache(2);
+    console.log('' + cache.put(1, 1));
+    console.log('' + cache.put(1, 1));
+    console.log('' + cache.get(1));
+    console.log('' + cache.put(3, 3));
+    console.log('' + cache.get(2));
+    console.log('' + cache.put(4, 4));
+    console.log('' + cache.get(1));
+    console.log('' + cache.get(3));
+    console.log('' + cache.get(4));
+
+    console.log('over')
+})();
+
